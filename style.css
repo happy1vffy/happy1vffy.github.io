@@ -1,0 +1,360 @@
+@charset "utf-8";
+* { margin:0; padding:0; }
+ul { list-style:none; }
+a { text-decoration:none; }
+a, span, img { display:block; }
+body, html { 
+    width:100%;
+    height:100%;
+    font-family:'Nanum Gothic', sans-serif;
+    font-family:'Montserrat', sans-serif;
+}
+.wrap { 
+    width:100%;
+    height:100%;
+}
+.page {
+    width:100%;
+    height:100%;
+    position:relative;
+    clear:both;
+    overflow:hidden;
+}
+#hd {
+    width:100%;
+    height:60px;
+    position:fixed;
+    left:0;
+    top:0;
+    background:#fff;
+    border-bottom:1px solid #000;
+    box-sizing:border-box;
+    z-index:1;
+}
+#hd a {
+    float:left;
+}
+#hd .logo {
+    width:45px;
+    height:30px;
+    background:url("./images/adidas_logo.png");
+    float:left;
+    margin:15px 20px;
+}
+#hd .cart {
+    width:23px;
+    height:28px;
+    background:url("./images/ico_cart.png") no-repeat;
+    margin: 16px 10px;
+    float:right;
+}
+#hd .menu {
+    float:right;
+    width:32px;
+    height:32px;
+    background:url("./images/ico_menu.png")  no-repeat;
+    margin: 14px 0;
+    margin-right:14px;
+}
+#hd #gnb {
+    display:none;
+    width:100%;
+    height:200px;
+    background:#fff;
+    position:inherit;
+    top:60px;
+    border-bottom:1px solid #eee;
+}
+#hd #gnb li {
+    display:inline-block;
+    width:100%;
+    height:36px;
+}
+#hd #gnb a {
+    line-height:36px;
+    font-size:0.85em;
+    text-indent:15px;
+    padding-right:15px;
+    color:#333;
+    font-weight:600;
+}
+#main {
+    width:100%;
+    height:100%;
+}
+#main ul {
+    width:100%;
+    height:100%;
+}
+#main ul li {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:0;
+    top:0;
+    left:0;
+}
+#main .bg1 { 
+    background:url("./images/bg1.jpg");
+    background-position:center center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+}
+#main .bg2 {
+    background:url("./images/bg2.jpg");
+    background-position:center center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+}
+#main .logoBox {
+    position:absolute;
+    z-index:-1;
+    top:275px;
+    left:calc(calc(100% - 148px) / 2);
+    top:calc(calc(100% - 100px) / 2);
+}
+#vs {
+    clear:both;
+    width:100%;
+    height:auto;
+    border-top:10px solid #eee;
+}
+#vs ul {
+    width:400%;
+}
+#vs ul li {
+    width:25%;
+    float:left;
+}
+#vs ul li img {
+    width:100%;
+}
+#best, #sale {
+    clear:both;
+    width:100%;
+    height:auto;
+    background:#fff;
+    border-top:10px solid #eee;
+}
+.sTit {
+    padding:20px;
+    padding-bottom:0px;
+}
+.bFrame {
+    width:100%;
+    overflow:scroll;
+}
+.bFrame .bBox{
+    width:500%;
+    height:270px;
+}
+.bFrame .bBox .bItem {
+    width:8%;
+    float:left;
+    margin:1%;
+}
+.bFrame .bBox .bItem a {
+    position:relative;
+}
+.bFrame .bBox .bItem .per {
+    width:25%;
+    height:20px;
+    text-align:center;
+    color:#fff;
+    background:#c53622;
+    font-size:0.4em;
+    font-weight:600;
+    line-height:20px;
+    position:absolute;
+    top:0;
+    right:0;
+}
+.bFrame .bBox .bItem img {
+    width:100%;
+    margin-bottom:10px;
+}
+.bFrame .bBox .bItem h5 {
+    font-size:0.6em;
+    color:#999;
+}
+.bFrame .bBox .bItem p {
+    font-size:0.8em;
+    font-weight:600;
+    color:#000;
+}
+.bItem .txtBox {
+    padding:5px;
+}
+.bItem .txtBox div {
+    float:left;
+    width:100%;
+    margin:6px 0;
+}
+.bItem .txtBox .star {
+    float:left;
+}
+.bItem .txtBox .star .fas {
+    font-size:0.6em;
+    color:#ffb500;
+}
+.bItem .txtBox .star .far {
+    font-size:0.6em;
+    color:#eee;
+}
+.bItem .txtBox .star li {
+    float:left;
+}
+.bItem .txtBox .price {
+    float:right;
+}
+.bItem .txtBox .price span {
+    font-size: 0.75em;
+    color:#000;
+    font-weight:600;
+    line-height:2em;
+}
+.bItem .txtBox .price.sale span {
+    font-size: 0.75em;
+    color:#c53622;
+    font-weight:600;
+}
+#original {
+    clear:both;
+    width:100%;
+    height:auto;
+    background:#fff;
+    border-top:10px solid #eee;
+}
+#original ul, #original li, #original img {
+    width:100%;
+}
+#ft {
+    clear:both;
+    width:100%;
+    height:auto;
+    background:#fff;
+    border-top:10px solid #eee;
+}
+#ft .fnb {
+    width:100%;
+    height:30px;
+    margin:15px 0;
+    float:left;
+    padding:0 4%;
+    box-sizing: border-box;
+}
+#ft .fnb li {
+    float:left;
+    width: 19%;
+    text-align:center;
+    background:#000;
+    margin-left: 0.8%;
+    box-sizing:border-box;
+    height: 30px;
+    line-height: 30px;
+}
+#ft .fnb li a {
+    color:#ccc;
+    font-size:0.8em;
+}
+#ft div {
+    padding: 0 5%;
+}
+#ft div h2 {
+    font-size:1.1em;
+    font-weight:600;
+    margin:10px 0;
+    margin-bottom: 15px;
+    color:#333;
+}
+#ft div span {
+    font-size:0.85em;
+    font-weight:600;
+    color:#333;
+}
+#ft div p {
+    font-size:0.8em;
+    color:#333;
+}
+#ft div p a {
+    color:#333;
+}
+#feedback {
+    clear:both;
+    width:100%;
+    height:auto;
+    background:#fff;
+    border-top:10px solid #eee;
+}
+#feedback div span {
+    margin:15px 5%;
+    font-size:0.85em;
+    color:#333;
+}
+#feedback div ul {
+}
+#feedback div ul li {
+    width:90%;
+    margin:5px auto;
+}
+#feedback input {
+    height:40px;
+    padding:5px 15px;
+    color:#ccc;
+    margin:2px auto;
+    font-size:0.85em;
+    box-sizing:border-box;
+    width:100%;
+    outline:none;
+}
+#feedback textarea {
+    height:180px;
+    padding:5px 15px;
+    color:#ccc;
+    margin:2px auto;
+    font-family:'Montserrat', sans-serif;
+    box-sizing:border-box;
+    width:100%;
+    outline:none;
+}
+#feedback div ul li .submit {
+    color:#333;
+}
+#copy {
+    clear:both;
+    width:100%;
+    height:auto;
+    background:#000;
+    padding:20px 0;
+    margin-top:20px;
+}
+#copy img {
+    width:148px;
+    height:100px;
+    margin:0 auto;
+}
+#copy p {
+    color:#ccc;
+    font-size:0.75em;
+    text-align:center;
+    margin-top:10px;
+}
+#toTop {
+    display:none;
+    width:32px;
+    height:32px;
+    position:fixed;
+    bottom:3%;
+    right:3%;
+    z-index:10;
+    border-radius:6px;
+    background:rgba(0,0,0,0.6);
+}
+#toTop a {
+    display:block;
+    width:32px;
+    height:32px;
+    background-image:url(./images/ico_top.png);
+    background-position:center center;
+    background-size:100% 100%;
+}
