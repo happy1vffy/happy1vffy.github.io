@@ -1,0 +1,266 @@
+@charset "utf-8";
+* { margin:0; padding:0;}
+body, html {
+    width:100%;
+    height:100%;
+    font-family:'Montserrat', sans-serif;
+    /* font-family:'Noto Sans KR', sans-serif; */
+    outline:0;
+    overflow-x:hidden; 
+    -ms-overflow-style:none; 
+}
+::-webkit-scrollbar { display:none; }
+ul { list-style:none; }
+a { text-decoration:none; }
+a, img, span { display:block; }
+.wrap {
+    width:100%;
+    height:100%;
+}
+.page {
+    clear:both;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.lloo {
+    width:1100px;
+    margin:0 auto;
+}
+.header {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:50;
+    transition:height .7s;
+}
+.header.scroll {
+    width:100%;
+    height:80px;
+    position:fixed;
+    z-index:50;
+    background:rgba(0,0,0,0.5);
+}
+.logo {
+    width:60px;
+    height:70px;
+    background:url(./images/logo_w.png);
+    background-repeat:no-repeat;
+    margin:15px 0;
+    float:left;
+}
+.scroll.logo {
+    width:50px;
+    height:52px;
+    background:url(./images/logo_w.png);
+    background-repeat: no-repeat;
+    margin:14px 0;
+    float:left;
+}
+.menu {
+    width:900px;
+    float:right;
+    margin:14px 0;
+}
+.gnb {
+    float:right;
+}
+.gnb li {
+    float:left;
+    margin-left:40px;
+}
+.gnb li a{
+    line-height:52px;
+    color:#fff;
+    font-size:1em;
+}
+#vs {
+    width:100%;
+    height:100%;
+}
+#vs ul {
+    width:400%;
+    height:100%;
+    position:relative;
+}
+#vs li {
+    width:25%;
+    float:left;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:25;
+}
+#vs li .img {
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    animation:vsImg 12.5s ease-in-out;
+    -webkit-animation:vsImg 12.5s ease-in-out;
+    -moz-animation:vsImg 12.5s ease-in-out;
+    height:100%;
+}
+#vs .img img {
+    position:absolute;
+    /* top:-9999px; */
+    /* bottom:-9999px; */
+    /* right:-9999px; */
+    /* left:-9999px; */
+    margin:auto;
+    min-width:100%;
+    min-height:100%;
+}
+@keyframes vsImg {
+	0% { transform:scale(1.1); }
+	100% { transform:scale(1); }
+}
+@-webkit-keyframes vsImg {
+	0% { -webkit-transform:scale(1.1); }
+	100% { -webkit-transform:scale(1); }
+}
+@-moz-keyframes vsImg {
+	0% { -moz-transform:scale(1.1); }
+	100% { -moz-transform:scale(1); }
+}
+
+.menuArea {
+    height:80px;
+    background:#222;
+}
+#con ul {
+    width:100%;
+    height:100%;
+}
+#con li {
+    width:50%;
+    height:46%;
+    float:left;
+    position:relative;
+}
+#con li a {
+    height:100%;
+}
+#con p {
+    position:absolute;
+    font-size:2.8em;
+    font-weight:900;
+    margin-top:20px;
+}
+#con .con1 p, #con .con3 p {
+    margin-left:-345px;
+    transition:.8s;
+}
+#con .con2 p, #con .con4 p {
+    margin-left:1000px;
+    transition:.8s;
+}
+#con .conImg {
+    height:100%;
+}
+#con .con1 div, #con .con3 div {
+    margin-left:-1000px;
+    transition:1s;
+}
+#con .con2 div, #con .con4 div {
+    margin-left:1000px;
+    transition:1s;
+}
+#con .con2, #con .con3 {
+    background:#333;
+}
+#con .conTit1 {
+    color:#555;
+}
+#con .conTit2 {
+    color:#fff;
+}
+#con img {
+    height:100%;
+    margin:0 auto;
+}
+#pf {
+    width:100%;
+}
+.tit {
+    padding:120px;
+    text-align:center;
+    font-size:2.4em;
+    font-weight:300;
+    height:30%;
+    background:#222;
+    color:#fff;
+    box-sizing:border-box;
+}
+#pf ul {
+    width:100%;
+    height:100%;
+}
+#pf li {
+    width:25%;
+    height:35%;
+    float:left;
+}
+#ft {
+    width:100%;
+}
+#ft .ftIco {
+    height:62%;
+    padding:10% 0;
+    box-sizing:border-box;
+}
+#ft .ftIco li {
+    float:left;
+    padding:10px;
+    width:200px;
+    height:200px;
+}
+#ft .ftlogo {
+    height:48px;
+    padding:20px;
+    margin:0 auto;
+}
+#ft .fas, #ft .far, #ft .fab {
+    font-size:3em;
+    margin-left:calc(calc(100% - 88px) / 2);
+    padding:20px;
+    box-sizing:border-box;
+}
+.ftTit, .ftCom {
+    text-align:center;
+}
+.ftTit {
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 1.4em;
+    padding: 10px;
+}
+.ftCom {
+    font-size: 1.2em;
+}
+#ft .copy {
+    width:100%;
+    height:80px;
+    background:#333;
+    color:#fff;
+    text-align:center;
+    font-weight:500;
+    font-size:1.2em;
+    line-height:78px;
+}
+.toTop {
+    display:none;
+    padding:15px;
+    position:fixed;
+    right:40px;
+    bottom:100px;
+    z-index:9999;
+    transition:.7s;
+}
+.fas.fa-chevron-circle-up {
+    display:block;
+    color:rgba(0,0,0,0.5);
+    font-size: 2.6em;
+}
