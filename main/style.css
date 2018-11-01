@@ -42,20 +42,22 @@ a, img, span { display:block; }
     background:rgba(0,0,0,0.5);
 }
 .logo {
-    width:60px;
+    width:50px;
     height:70px;
     background:url(./images/logo_w.png);
     background-repeat:no-repeat;
-    margin:15px 0;
+    margin:10px 0;
     float:left;
+    background-position:85%;
 }
-.scroll.logo {
+.logo.scroll {
     width:50px;
     height:52px;
     background:url(./images/logo_w.png);
     background-repeat: no-repeat;
     margin:14px 0;
     float:left;
+    transition:.7s;
 }
 .menu {
     width:900px;
@@ -68,15 +70,24 @@ a, img, span { display:block; }
 .gnb li {
     float:left;
     margin-left:40px;
+    padding:4px;
+    box-sizing:border-box;
+    width:100px;
+}
+.gnb li:hover a {
+    font-size:1.2em;
+    font-weight:600;
 }
 .gnb li a{
     line-height:52px;
     color:#fff;
     font-size:1em;
+    text-align:center;
 }
 #vs {
     width:100%;
     height:100%;
+    position:relative;
 }
 #vs ul {
     width:400%;
@@ -125,7 +136,35 @@ a, img, span { display:block; }
 	0% { -moz-transform:scale(1.1); }
 	100% { -moz-transform:scale(1); }
 }
-
+.mainLogo {
+    position:absolute;
+    width:500px;
+    height:600px;
+    top: 200px;
+    left: calc(calc(100% - 500px) / 2);
+    z-index:30;
+}
+.mainLogo span {
+    width:100%;
+    height:100%;
+    font-size:300px;
+    font-weight:600;
+    color:#fff;
+    text-align:center;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+.mainLogo .m {
+    margin-top:-100px;
+}
+.mainLogo .i {
+    margin-top:-400px;
+}
+.mainLogo .n {
+    margin-top:-400px;
+}
+.mainLogo .a {
+    margin-top:-400px;
+}
 .menuArea {
     height:80px;
     background:#222;
@@ -140,6 +179,24 @@ a, img, span { display:block; }
     float:left;
     position:relative;
 }
+#con li:hover .conImg {
+    height:110%;
+    transition:.7s;
+    margin-top:-7%;
+}
+#con .con2, #con .con3 {
+    background:#333;
+}
+#con .con4 {
+    background:#fff;
+}
+.con3, .con4 {
+    margin-top:-100%;
+}
+.con3.scroll,.con4.scroll {
+    margin-top:0;
+    transition:.7s;
+}
 #con li a {
     height:100%;
 }
@@ -147,29 +204,30 @@ a, img, span { display:block; }
     position:absolute;
     font-size:2.8em;
     font-weight:900;
-    margin-top:20px;
+    top:20px;
 }
-#con .con1 p, #con .con3 p {
+#con p.scroll {
+    margin-left:20px;
+    transition:.8s;
+}
+.con1 p, .con3 p {
     margin-left:-345px;
-    transition:.8s;
 }
-#con .con2 p, #con .con4 p {
+.con2 p, .con4 p {
     margin-left:1000px;
-    transition:.8s;
 }
 #con .conImg {
     height:100%;
 }
-#con .con1 div, #con .con3 div {
-    margin-left:-1000px;
+#con .conImg.scroll {
+    margin-left:0;
     transition:1s;
+}
+#con .con1 div, #con .con3 div {
+    margin-left:-1500px;
 }
 #con .con2 div, #con .con4 div {
     margin-left:1000px;
-    transition:1s;
-}
-#con .con2, #con .con3 {
-    background:#333;
 }
 #con .conTit1 {
     color:#555;
@@ -202,6 +260,59 @@ a, img, span { display:block; }
     width:25%;
     height:35%;
     float:left;
+    position:relative;/*
+    border:100px solid #082259;
+    border-*/
+}
+#pf li a {
+    width:100%;
+    height:100%;
+}
+#pf li img{
+    margin: 0 auto;
+    height: 100%;
+    float:left;
+    background-position: center;
+}
+#pf .hover {
+    opacity:0;
+    width:100%;
+    height:100%;
+    transition:.7s;
+}
+#pf li:hover .hover {
+    opacity:1;
+    transition:.7s;
+}
+#pf li:hover .more {
+    transform:rotate(360deg);
+    transition:.7s;
+}
+#pf li .hover.t-1{
+    background:rgba(9,34,90,0.9);
+    position:absolute;
+    top:0;
+    left:0;
+    box-sizing:border-box;
+    transition:.7s;
+}
+#pf .ptBox {
+    position:absolute;
+    top: calc(calc(100% - 89px) / 2 );
+    text-align: center;
+    width: 100%;
+}
+#pf .pfTit, #pf .pfCom {
+    text-align:center;
+    color:#fff;
+    line-height: 1.75rem;
+}
+#pf .more {
+    padding:6px 0;
+}
+#pf .more .fas.fa-plus-circle {
+    color:#fff;
+    font-size: 1.4rem;
 }
 #ft {
     width:100%;

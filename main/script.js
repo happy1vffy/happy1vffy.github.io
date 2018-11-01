@@ -4,13 +4,11 @@ $(document).ready(function(){
     if(e.originalEvent.wheelDelta < 0){ 
         $("html,body").not(":animated").animate({scrollTop:"+="+ht+"px"},800);
         $(".toTop").fadeIn(500);
-        $(".header").addClass("scroll");
-        $("#con p").css("margin-left","20px");
-        $("#con .conImg").css("margin-left","0");
+        $(".header,.logo,#con p,#con .conImg, .con3, .con4").addClass("scroll");
     } else {
         $("html,body").not(":animated").animate({scrollTop:"-="+ht+"px"},800);
-        $(".toTop").fadeOut(500);
-        $(".header").removeClass("scroll");
+//        $(".toTop").fadeOut(500);
+//        $(".header,.logo,#con p,#con .conImg").removeClass("scroll");
     }
     return false;
     });
@@ -36,6 +34,8 @@ $(document).ready(function(){
            $("#vs ul li").eq(i).siblings().css("opacity", "0");
         });
     };
+    
+    
 });
 /*
 $(window).scroll(function(){
